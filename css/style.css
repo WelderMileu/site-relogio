@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* menu de navegacão */
@@ -88,6 +87,38 @@ nav .hamburguer .item-3 {
   height: 5px;
   background-color: #2E4756;
   transition: 0.5s ease-in;
+}
+
+/* Banner da nossa aplicação */
+main {
+  padding: 40px;
+  display: grid;
+  grid-template-areas: "sociais cont imgs";
+}
+main div:nth-child(1) {
+  grid-area: cont;
+}
+main div:nth-child(2) {
+  background-color: #4D8693;
+  height: 500px;
+  grid-area: sociais;
+}
+main div:nth-child(2) div {
+  background-color: #4D8693;
+  padding: 10px;
+}
+main div:nth-child(2) div ul {
+  display: block;
+}
+main div:nth-child(2) div ul li {
+  list-style: none;
+}
+main div:nth-child(2) div ul li a {
+  color: #DBE6E9;
+  font-size: 20px;
+}
+main div:nth-child(3) {
+  grid-area: imgs;
 }
 
 @media screen and (max-width: 800px) {

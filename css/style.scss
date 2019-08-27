@@ -5,7 +5,6 @@ $fonte-01:'Fjalla One', sans-serif;
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
-	overflow: hidden;
 }
 
 /* menu de navegacão */
@@ -98,6 +97,42 @@ nav{
 	}
 }
 
+/* Banner da nossa aplicação */
+
+main{
+	padding:40px;
+	display: grid;
+	grid-template-areas: 
+	"sociais cont imgs";
+	div{
+		&:nth-child(1){
+			grid-area: cont;
+		}
+		&:nth-child(2){
+			background-color:#4D8693;
+			height: 500px;
+			grid-area: sociais;
+			
+			div{
+				background-color:#4D8693;
+				padding:10px;
+				ul{
+					display: block;
+					li{
+						list-style: none;
+						a{
+							color: #DBE6E9;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+		&:nth-child(3){
+			grid-area: imgs;
+		}
+	}
+}
 
 @media screen and(max-width: 800px){
 	nav{
