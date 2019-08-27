@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/* menu de navegacão */
+/* Menu de navegacão */
 nav {
   width: 100%;
   padding: 40px;
@@ -155,7 +155,7 @@ main div:nth-child(3) {
 }
 main div:nth-child(3) .tabela {
   position: absolute;
-  transform: translate(-40%, 450%);
+  transform: translate(-10%, 450%);
   font-weight: bold;
   display: block;
   width: 250px;
@@ -214,8 +214,8 @@ main div:nth-child(3) div div ul li a {
 
   nav {
     background-color: #DBE6E9;
-    /* hamburguer */
-    /* toggler do menu */
+    /* Hamburguer */
+    /* Toggler do menu */
   }
   nav .nav-bar {
     display: none;
@@ -261,7 +261,7 @@ main div:nth-child(3) div div ul li a {
     text-align: center;
   }
 
-  /* resposividade do nosso banner */
+  /* Resposividade do nosso banner */
   main {
     display: grid;
     grid-template-areas: "sociais cont" ". images";
@@ -292,6 +292,36 @@ main div:nth-child(3) div div ul li a {
     text-align: justify;
     padding-left: 10px;
     font-size: 0.8em;
+    width: 100%;
+  }
+  main div:nth-child(3) .tabela {
+    transform: translate(-10%, 420%);
+  }
+  main div:nth-child(3) div {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas: "img01 img01" "img01 img01" "img02 img03" "indicator indicator";
+  }
+  main div:nth-child(3) div img:nth-child(1) {
+    grid-area: img01;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+  main div:nth-child(3) div img:nth-child(2) {
+    grid-area: img02;
+    width: 100%;
+    height: 69px;
+    object-fit: cover;
+    object-position: top;
+  }
+  main div:nth-child(3) div img:nth-child(3) {
+    grid-area: img03;
+    width: 100%;
+    height: 69px;
+    object-fit: cover;
+    object-position: top;
   }
 }
 

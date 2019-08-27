@@ -12,7 +12,7 @@ $fonte-03:'Poppins', sans-serif;;
 	box-sizing: border-box;
 }
 
-/* menu de navegacão */
+/* Menu de navegacão */
 
 nav{
 	width: 100%;
@@ -167,14 +167,13 @@ main{
 			grid-area: imgs;
 			.tabela{
 				position:absolute;
-				transform: translate(-40%, 450%);
+				transform: translate(-10%, 450%);
 				font-weight: bold;
 				display: block;
 				width: 250px;
 				text-transform: uppercase;
 				font-family: $fonte-03;
 				p{
-					// background-color:#DBE6E9;
 					width: 100%;
 					text-align: left;
 					padding:5px;
@@ -240,7 +239,7 @@ main{
 		.hamburguer{
 			display: block;
 		}
-		/* hamburguer */
+		/* Hamburguer */
 		.transforma{
 			.item-1{
 				transform: rotate(50deg);
@@ -259,7 +258,7 @@ main{
 				transition: .5s ease-in;
 			}
 		}
-		/* toggler do menu */
+		/* Toggler do menu */
 		.open-nav{
 			position:absolute;
 			width: 100%;
@@ -282,7 +281,7 @@ main{
 			}
 		}
 	}
-	/* resposividade do nosso banner */
+	/* Resposividade do nosso banner */
 	main{
 		display: grid;
 		grid-template-areas:
@@ -317,6 +316,42 @@ main{
 					text-align: justify;
 					padding-left:10px;
 					font-size: .8em;
+					width: 100%;
+				}
+			}
+		}
+		div:nth-child(3){
+			.tabela{
+				transform: translate(-10%, 420%);
+			}
+			div{
+				display: grid;
+				grid-gap:5px;
+				grid-template-areas:
+				"img01 img01"
+				"img01 img01"
+				"img02 img03"
+				"indicator indicator";
+				img:nth-child(1){
+					grid-area:img01;
+					width: 100%;
+					height: 300px;
+					object-fit: cover;
+					object-position: top;
+				}
+				img:nth-child(2){
+					grid-area:img02;
+					width: 100%;
+					height: 69px;
+					object-fit: cover;
+					object-position: top;
+				}
+				img:nth-child(3){
+					grid-area:img03;
+					width: 100%;
+					height: 69px;
+					object-fit: cover;
+					object-position: top;
 				}
 			}
 		}
