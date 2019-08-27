@@ -130,7 +130,6 @@ nav .hamburguer .item-3 {
     background-color: #DBE6E9;
     border-radius: 20px;
     top: 0;
-    transition: 1s;
   }
   nav .open-nav ul {
     display: block;
