@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjord+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 $fonte-01:'Fjalla One', sans-serif;
+$fonte-02:'Fjord One', serif;
+$fonte-03:'Poppins', sans-serif;;
+
 *{
 	margin:0;
 	padding: 0;
@@ -46,6 +51,7 @@ nav{
 				a{
 					text-decoration:none;
 					color: #4D8693;
+					font-weight: normal;
 				}
 				&:nth-child(4) > a{
 					color:#2E4756;
@@ -107,12 +113,40 @@ main{
 	div{
 		&:nth-child(1){
 			grid-area: cont;
+			div{
+				width: 100%;
+				margin: 0px 100px;
+				h1{
+					font-family: $fonte-02;
+					text-transform: uppercase;
+					font-weight: 10;
+				}
+				p{
+					font-family: $fonte-03;
+					color: #4D8693;
+					text-align: right;
+					width: 45%;
+					margin-top:30px;
+				}
+				button{
+					margin-top:30px;
+					border:none;
+					background-color:#DBE6E9;
+					color:#4D8693;
+					text-transform: uppercase;
+					font-size: .9em;
+					padding:5px 30px;
+					float: right;
+				}	
+			}
 		}
 		&:nth-child(2){
 			background-color:#4D8693;
-			height: 500px;
+			height: 450px;
 			grid-area: sociais;
-			
+			display: grid;
+			justify-content: bottom;
+			align-items:center;
 			div{
 				background-color:#4D8693;
 				padding:10px;
@@ -122,7 +156,7 @@ main{
 						list-style: none;
 						a{
 							color: #DBE6E9;
-							font-size: 20px;
+							font-size: 30px;
 						}
 					}
 				}
@@ -130,6 +164,65 @@ main{
 		}
 		&:nth-child(3){
 			grid-area: imgs;
+			.tabela{
+				position:absolute;
+				transform: translate(-40%, 450%);
+				font-weight: bold;
+				display: block;
+				width: 250px;
+				text-transform: uppercase;
+				font-family: $fonte-03;
+				p{
+					// background-color:#DBE6E9;
+					width: 100%;
+					text-align: left;
+					padding:5px;
+					color: #FFFF;
+					margin:0px;
+					text-shadow:1px 1px #646464,
+								-1px -1px #646464;
+				}
+			}
+			div{
+				display: grid;
+				grid-gap:5px;
+				grid-template-areas:
+				"img01 ."
+				"img01 img02"
+				"img01 img03"
+				"indicator indicator";
+				img:nth-child(1){
+					grid-area:img01;
+					width: 266px;
+					height: 400px;
+				}
+				img:nth-child(2){
+					grid-area:img02;
+					width: 254px;
+					height: 169px;
+				}
+				img:nth-child(3){
+					grid-area:img03;
+					width: 254px;
+					height: 169px;
+				}
+				div{
+					grid-area:indicator;
+					justify-content: start;
+					align-items:start;
+					ul{
+						display: flex;
+						li{
+							list-style: none;
+							a{
+								text-decoration: none;
+								color: #2E4756;
+								margin-right: 10px; 
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

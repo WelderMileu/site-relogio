@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjord+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +45,7 @@ nav .nav-bar ul li {
 nav .nav-bar ul li a {
   text-decoration: none;
   color: #4D8693;
+  font-weight: normal;
 }
 nav .nav-bar ul li:nth-child(4) > a {
   color: #2E4756;
@@ -98,10 +101,39 @@ main {
 main div:nth-child(1) {
   grid-area: cont;
 }
+main div:nth-child(1) div {
+  width: 100%;
+  margin: 0px 100px;
+}
+main div:nth-child(1) div h1 {
+  font-family: "Fjord One", serif;
+  text-transform: uppercase;
+  font-weight: 10;
+}
+main div:nth-child(1) div p {
+  font-family: "Poppins", sans-serif;
+  color: #4D8693;
+  text-align: right;
+  width: 45%;
+  margin-top: 30px;
+}
+main div:nth-child(1) div button {
+  margin-top: 30px;
+  border: none;
+  background-color: #DBE6E9;
+  color: #4D8693;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 5px 30px;
+  float: right;
+}
 main div:nth-child(2) {
   background-color: #4D8693;
-  height: 500px;
+  height: 450px;
   grid-area: sociais;
+  display: grid;
+  justify-content: bottom;
+  align-items: center;
 }
 main div:nth-child(2) div {
   background-color: #4D8693;
@@ -115,10 +147,63 @@ main div:nth-child(2) div ul li {
 }
 main div:nth-child(2) div ul li a {
   color: #DBE6E9;
-  font-size: 20px;
+  font-size: 30px;
 }
 main div:nth-child(3) {
   grid-area: imgs;
+}
+main div:nth-child(3) .tabela {
+  position: absolute;
+  transform: translate(-40%, 450%);
+  font-weight: bold;
+  display: block;
+  width: 250px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+main div:nth-child(3) .tabela p {
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  color: #FFFF;
+  margin: 0px;
+  text-shadow: 1px 1px #646464, -1px -1px #646464;
+}
+main div:nth-child(3) div {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas: "img01 ." "img01 img02" "img01 img03" "indicator indicator";
+}
+main div:nth-child(3) div img:nth-child(1) {
+  grid-area: img01;
+  width: 266px;
+  height: 400px;
+}
+main div:nth-child(3) div img:nth-child(2) {
+  grid-area: img02;
+  width: 254px;
+  height: 169px;
+}
+main div:nth-child(3) div img:nth-child(3) {
+  grid-area: img03;
+  width: 254px;
+  height: 169px;
+}
+main div:nth-child(3) div div {
+  grid-area: indicator;
+  justify-content: start;
+  align-items: start;
+}
+main div:nth-child(3) div div ul {
+  display: flex;
+}
+main div:nth-child(3) div div ul li {
+  list-style: none;
+}
+main div:nth-child(3) div div ul li a {
+  text-decoration: none;
+  color: #2E4756;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 800px) {
