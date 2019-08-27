@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* menu de navegacão */
+nav {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  overflow: hidden;
+  /* Logo tipo*/
+  /* Links do menu */
+}
+nav .logo {
+  display: flex;
+}
+nav .logo a {
+  display: flex;
+  color: black;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+nav .logo a i {
+  font-size: 2em;
+  padding-right: 5px;
+}
+nav .nav-bar ul {
+  display: flex;
+}
+nav .nav-bar ul li {
+  list-style: none;
+  padding-right: 100px;
+}
+nav .nav-bar ul li a {
+  text-decoration: none;
+  color: #4D8693;
+}
+nav .nav-bar ul li:nth-child(4) > a {
+  color: #2E4756;
+  display: flex;
+}
+nav .nav-bar ul li:nth-child(4) > a i {
+  margin-left: 5px;
+  font-size: 1.3em;
+}
+nav .boll {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #DBE6E9;
+  border-radius: 100%;
+  transform: translate(200%, -50%);
+  z-index: -1;
+}
+nav .hamburguer {
+  transform: rotateY(190deg);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none;
+}
+nav .hamburguer .item-1 {
+  width: 50px;
+  height: 5px;
+  background-color: #2E4756;
+  transition: 0.5s ease-in;
+}
+nav .hamburguer .item-2 {
+  margin-top: 5px;
+  width: 40px;
+  height: 5px;
+  background-color: #2E4756;
+  transition: 0.5s ease-in;
+}
+nav .hamburguer .item-3 {
+  margin-top: 5px;
+  width: 30px;
+  height: 5px;
+  background-color: #2E4756;
+  transition: 0.5s ease-in;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    background-color: #DBE6E9;
+    /* hamburguer */
+    /* toggler do menu */
+  }
+  nav .nav-bar {
+    display: none;
+  }
+  nav .hamburguer {
+    display: block;
+  }
+  nav .transforma .item-1 {
+    transform: rotate(50deg);
+    margin-top: 20px;
+    width: 25px;
+    transition: 0.5s ease-in;
+  }
+  nav .transforma .item-2 {
+    transform: rotate(130deg);
+    margin-top: -5px;
+    width: 25px;
+    transition: 0.5s ease-in;
+  }
+  nav .transforma .item-3 {
+    display: none;
+    transition: 0.5s ease-in;
+  }
+  nav .open-nav {
+    position: absolute;
+    width: 100%;
+    background-color: orange;
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #DBE6E9;
+    border-radius: 20px;
+    top: 0;
+    transition: 1s;
+  }
+  nav .open-nav ul {
+    display: block;
+    width: 100%;
+  }
+  nav .open-nav ul li {
+    margin: 20px 0 20px 0;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

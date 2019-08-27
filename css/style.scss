@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+$fonte-01:'Fjalla One', sans-serif;
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+/* menu de navegacão */
+
+nav{
+	width: 100%;
+	padding:40px;
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+	font-family:$fonte-01;
+	font-size: 1.2em;
+	font-weight: bold;
+	overflow: hidden;
+	/* Logo tipo*/
+	
+	.logo{
+		display: flex;
+		a{
+			display: flex;
+			color:rgb(0,0,0);
+			font-size: 1.2em;
+			text-decoration: none;
+			i{
+				font-size: 2em;
+				padding-right:5px;
+			}
+		}
+	}
+
+	/* Links do menu */
+
+	.nav-bar{
+		ul{
+			display: flex;
+			li{
+				list-style: none;
+				padding-right:100px;
+				a{
+					text-decoration:none;
+					color: #4D8693;
+				}
+				&:nth-child(4) > a{
+					color:#2E4756;
+					display: flex;
+					i{
+						margin-left: 5px;
+						font-size: 1.3em;
+					}
+				}
+			}
+		}
+	}
+	.boll{
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		background-color: #DBE6E9;
+		border-radius:100%;
+		transform: translate(200%, -50%);
+
+		z-index: -1;
+	}
+	.hamburguer{
+		transform: rotateY(190deg);
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		display: none;
+		.item-1{
+			width: 50px;
+			height: 5px;
+			background-color:#2E4756;
+			transition: .5s ease-in;
+		}
+		.item-2{
+			margin-top: 5px;
+			width: 40px;
+			height: 5px;
+			background-color:#2E4756;
+			transition: .5s ease-in;
+		}
+		.item-3{
+			margin-top: 5px;
+			width: 30px;
+			height: 5px;
+			background-color:#2E4756;
+			transition: .5s ease-in;
+		}
+	}
+}
+
+
+@media screen and(max-width: 800px){
+
+	nav{
+		background-color:#DBE6E9;
+		.nav-bar{
+			display: none;
+		}
+		.hamburguer{
+			display: block;
+		}
+		/* hamburguer */
+		.transforma{
+			.item-1{
+				transform: rotate(50deg);
+				margin-top:20px;
+				width: 25px;
+				transition: .5s ease-in;
+			}
+			.item-2{
+				transform: rotate(130deg);
+				margin-top:-5px;
+				width: 25px;
+				transition: .5s ease-in;
+			}
+			.item-3{
+				display: none;
+				transition: .5s ease-in;
+			}
+		}
+		/* toggler do menu */
+		.open-nav{
+			position:absolute;
+			width: 100%;
+			background-color:orange;
+			margin-top:100px;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			background-color:#DBE6E9;
+			border-radius:20px;
+			top:0;
+			transition: 1s;
+			ul{
+				display: block;
+				width: 100%;
+				li{
+				margin: 20px 0 20px 0;
+				text-align: center;
+				}
+			}
+		}
+	}
+}
