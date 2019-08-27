@@ -97,13 +97,14 @@ main {
   padding: 40px;
   display: grid;
   grid-template-areas: "sociais cont imgs";
+  overflow: hidden;
 }
 main div:nth-child(1) {
   grid-area: cont;
 }
 main div:nth-child(1) div {
   width: 100%;
-  margin: 0px 100px;
+  padding: 0px 30px;
 }
 main div:nth-child(1) div h1 {
   font-family: "Fjord One", serif;
@@ -207,6 +208,10 @@ main div:nth-child(3) div div ul li a {
 }
 
 @media screen and (max-width: 800px) {
+  .boll {
+    display: none;
+  }
+
   nav {
     background-color: #DBE6E9;
     /* hamburguer */
@@ -254,6 +259,39 @@ main div:nth-child(3) div div ul li a {
   nav .open-nav ul li {
     margin: 20px 0 20px 0;
     text-align: center;
+  }
+
+  /* resposividade do nosso banner */
+  main {
+    display: grid;
+    grid-template-areas: "sociais cont" ". images";
+  }
+  main div:nth-child(1) {
+    grid-area: cont;
+    width: 100%;
+  }
+  main div:nth-child(2) {
+    grid-area: sociais;
+  }
+  main div:nth-child(3) {
+    grid-area: images;
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  main div:nth-child(1) div {
+    margin: 0px;
+    width: 100%;
+  }
+  main div:nth-child(1) div h1 {
+    width: 100%;
+    font-size: 1em;
+  }
+  main div:nth-child(1) div p {
+    text-align: justify;
+    padding-left: 10px;
+    font-size: 0.8em;
   }
 }
 

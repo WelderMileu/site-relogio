@@ -110,12 +110,13 @@ main{
 	display: grid;
 	grid-template-areas: 
 	"sociais cont imgs";
+	overflow: hidden;
 	div{
 		&:nth-child(1){
 			grid-area: cont;
 			div{
 				width: 100%;
-				margin: 0px 100px;
+				padding:0px 30px;
 				h1{
 					font-family: $fonte-02;
 					text-transform: uppercase;
@@ -228,6 +229,9 @@ main{
 }
 
 @media screen and(max-width: 800px){
+	.boll{
+		display: none;
+	}
 	nav{
 		background-color:#DBE6E9;
 		.nav-bar{
@@ -274,6 +278,45 @@ main{
 				li{
 					margin: 20px 0 20px 0;
 					text-align: center;
+				}
+			}
+		}
+	}
+	/* resposividade do nosso banner */
+	main{
+		display: grid;
+		grid-template-areas:
+		"sociais cont"
+		". images";
+		div:nth-child(1){
+			grid-area:cont;
+			width: 100%;
+		}
+		div:nth-child(2){
+			grid-area:sociais;
+		}
+		div:nth-child(3){
+			grid-area:images;
+			margin-top:40px;
+			width: 100%;
+		}
+	}
+}
+
+@media screen and(max-width:600px){
+	main{
+		div:nth-child(1){
+			div{
+				margin: 0px;
+				width: 100%;
+				h1{
+					width: 100%;
+					font-size: 1em;
+				}
+				p{
+					text-align: justify;
+					padding-left:10px;
+					font-size: .8em;
 				}
 			}
 		}
