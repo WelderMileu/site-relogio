@@ -117,16 +117,18 @@ main{
 			div{
 				width: 100%;
 				padding:0px 30px;
+
 				h1{
 					font-family: $fonte-02;
 					text-transform: uppercase;
 					font-weight: 10;
+					text-align: center;
 				}
 				p{
 					font-family: $fonte-03;
 					color: #4D8693;
 					text-align: right;
-					width: 45%;
+					width: 80%;
 					margin-top:30px;
 				}
 				button{
