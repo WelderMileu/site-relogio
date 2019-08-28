@@ -250,6 +250,7 @@ section{
 	.card{
 		display: flex;
 		margin-top: 150px;
+		width: 100%;
 		img{
 			width: 476px;
 			height: 317px;
@@ -280,7 +281,7 @@ section{
 			width: 36%;
 			height: 20px;
 			display: flex;
-			justify-content: start;
+			justify-content: end;
 			div{
 				display: grid;
 				grid-template-areas:
@@ -319,6 +320,69 @@ section{
 				}
 			}
 		}
+	}
+	.inverse{
+		display: grid;
+		grid-template-areas:
+		"div1 div2";
+		div:nth-child(1){
+			grid-area:div2;
+		}
+		div:nth-child(2){
+			grid-area:div1;
+		}
+	}
+}
+
+.contact{
+	display: grid;
+	justify-content: center;
+	margin-top: 200px;
+	.title{
+		font-family: $fonte-02;
+		text-transform: uppercase;
+		font-weight: 10;
+		text-align: center;
+	}
+	.user{
+		display: flex;
+		width:100%;
+		margin-top: 100px;
+		position:relative;
+		padding:50px;
+		z-index: 1000;
+		background-color:#fff;
+		img{
+			width: 294px;
+			height: 198px;
+		}
+		div:nth-child(2){
+			padding:20px;
+			h1{
+				font-family: callibri, sans-serif;
+				background-color:#DBE6E9;
+				color: #2E4756;
+				width: 300px;
+				padding:5px;
+			}
+			p{
+				font-family: callibri, sans-serif;
+				margin-top: 10px;
+				color: #2E4756;
+			}
+		}
+	}
+	.cubo1, .cubo2{
+		width: 209px;
+		height: 209px;
+		background-color:#646464;
+		position:absolute;
+	}
+	.cubo1{
+		transform: translate(300px, 135px);
+	}
+	.cubo2{
+		transform: translate(835px, 238px);
 	}
 }
 
@@ -397,8 +461,36 @@ section{
 	}
 	.card{
 		flex-direction: column;
+		p{
+			width: 100% !important;
+			margin-top: 30px;
+		}
+	}
+	.inverse{
+		display: grid;
+		grid-template-areas:
+		"div2 div2" 
+		"div1 div1" !important;
+		div:nth-child(1){ 
+			grid-area:div2;
+			width: 100%;
+		}
+		div:nth-child(2){
+			grid-area:div1;
+			width: 100%;
+			color: blue;
+			p{
+				width: 100%;
+				margin-top: 30px;
+			}
+		}
+		.icone{
+			width: 80% !important;
+		}
 	}
 }
+
+
 
 @media screen and(max-width:600px){
 	main{
@@ -408,19 +500,24 @@ section{
 				width: 100%;
 				h1{
 					width: 100%;
-					font-size: 1em;
+					font-size: 1.3em;
 				}
 				p{
-					text-align: justify;
+					display: none;
+					text-align: justify-all;
 					padding-left:10px;
-					font-size: .8em;
+					font-size: 1em;
 					width: 100%;
 				}
 			}
 		}
 		div:nth-child(3){
 			.tabela{
-				transform: translate(-10%, 420%);
+				transform: translate(-10%, 340%);
+				p{
+					display: block;
+					color: #fff;
+				}
 			}
 			div{
 				display: grid;
@@ -451,6 +548,13 @@ section{
 					object-fit: cover;
 					object-position: top;
 				}
+			}
+		}
+	}
+	.card{
+		div:nth-child(1){
+			img{
+				width: 100%;
 			}
 		}
 	}
