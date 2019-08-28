@@ -229,6 +229,99 @@ main{
 	}
 }
 
+/* Corpo da pagina */
+
+section{
+	padding:0 10%;
+	.title{
+		h1{
+			font-family: $fonte-02;
+			text-transform: uppercase;
+			font-weight: 10;
+			text-align: center;
+		}
+		&:before{ // Nao esta funcionando
+			content: '';
+			width: 200px;
+			height: 50px;
+			background-color:black;
+		}
+	}
+	.card{
+		display: flex;
+		margin-top: 150px;
+		img{
+			width: 476px;
+			height: 317px;
+			object-fit: cover;
+			object-position: center;
+			box-shadow:10px 20px 30px black;
+		}
+		div{
+			display: flex;
+			justify-content: end;
+			align-items:end;
+			p{
+				font-family: $fonte-03;
+				padding:0px;
+				width: 80%;
+				float: right;
+				color: #4D8693;
+				justify-content: end;
+				align-items:end;
+			}	
+		}
+		.obj2{
+			justify-content: start;
+		}
+		.icone{
+			position:absolute;
+			transform: translate(0, 50px);
+			width: 36%;
+			height: 20px;
+			display: flex;
+			justify-content: start;
+			div{
+				display: grid;
+				grid-template-areas:
+				"tem1 tem1"
+				"tem2 tem4"
+				"tem3 tem4";
+				div:nth-child(1){
+					grid-area:tem1;
+					margin-top: 5px;
+					width: 100px;
+					height: 3px;
+					background-color:#646464;
+				}
+				div:nth-child(2){
+					grid-area:tem2;
+					margin-top: 5px;
+					width: 60px;
+					height: 3px;
+					background-color:#646464;
+				}
+				div:nth-child(3){
+					grid-area:tem3;
+					margin-top: 5px;
+					width: 40px;
+					height: 3px;
+					background-color:#646464;
+				}
+				div:nth-child(4){
+					background-color:blue;
+					grid-area:tem4;
+					margin-left: 40%;
+					margin-top: 3px;
+					width: 15px;
+					height: 15px;
+					background-color:#DBE6E9;
+				}
+			}
+		}
+	}
+}
+
 @media screen and(max-width: 800px){
 	.boll{
 		display: none;
