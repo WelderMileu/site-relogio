@@ -306,18 +306,19 @@ section .inverse div:nth-child(2) {
   grid-area: div1;
 }
 
-.contact {
+/* container do proprietario */
+.proprietary {
   display: grid;
   justify-content: center;
   margin-top: 200px;
 }
-.contact .title {
+.proprietary .title {
   font-family: "Fjord One", serif;
   text-transform: uppercase;
   font-weight: 10;
   text-align: center;
 }
-.contact .user {
+.proprietary .user {
   display: flex;
   width: 100%;
   margin-top: 100px;
@@ -326,35 +327,35 @@ section .inverse div:nth-child(2) {
   z-index: 1000;
   background-color: #fff;
 }
-.contact .user img {
+.proprietary .user img {
   width: 294px;
   height: 198px;
 }
-.contact .user div:nth-child(2) {
+.proprietary .user div:nth-child(2) {
   padding: 20px;
 }
-.contact .user div:nth-child(2) h1 {
+.proprietary .user div:nth-child(2) h1 {
   font-family: callibri, sans-serif;
   background-color: #DBE6E9;
   color: #2E4756;
   width: 300px;
   padding: 5px;
 }
-.contact .user div:nth-child(2) p {
+.proprietary .user div:nth-child(2) p {
   font-family: callibri, sans-serif;
   margin-top: 10px;
   color: #2E4756;
 }
-.contact .cubo1, .contact .cubo2 {
+.proprietary .cubo1, .proprietary .cubo2 {
   width: 209px;
   height: 209px;
   background-color: #646464;
   position: absolute;
 }
-.contact .cubo1 {
+.proprietary .cubo1 {
   transform: translate(300px, 135px);
 }
-.contact .cubo2 {
+.proprietary .cubo2 {
   transform: translate(835px, 238px);
 }
 
